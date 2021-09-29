@@ -1,0 +1,15 @@
+[package]
+name = "tokitimeout"
+authors = [ "Scott Tadman <tadman@postageapp.com>" ]
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+clap = { version = "=3.0.0-beta.2" }
+clap_derive = { version = "=3.0.0-beta.2" }
+env_logger = { version = "*" }
+futures = { version = "0.3.17", features = [ "thread-pool"] }
+log = { version = "*" }
+tokio = { version = "1.12.0", features = [ "full" ] }
+tokio-stream = { version = "0.1.7", features = [ "time" ] }
+tokio-util = { version = "*", features = [ "codec" ] }
