@@ -281,8 +281,8 @@ async fn main() -> Result<(), Box<dyn Error>> {
 
     let mb = (total_lines * (program.length + 2)) as f64 / (1024 * 1024) as f64;
 
-    log::info!("Average TPS: {:.0}", total_lines as f64 / total_elapsed.as_secs_f64());
-    log::info!("Average MB/s: {:.1}", mb / total_elapsed.as_secs_f64());
+    log::info!("Overall TPS: {:.0}", total_lines as f64 / total_elapsed.as_secs_f64());
+    log::info!("Per-connection MB/s: {:.1} (Average)", mb / total_elapsed.as_secs_f64());
     log::info!("Overall MB/s: {:.1}", mb / elapsed.as_secs_f64());
 
 
